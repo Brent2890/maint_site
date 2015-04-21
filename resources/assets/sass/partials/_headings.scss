@@ -1,16 +1,17 @@
-.heading-style {
+.heading-style{
   margin-top: 1em;
   margin-bottom: 0;
   padding-bottom: 1em;
   text-align: center;
-  line-height: 1; }
-  .heading-style:after {
+  line-height: 1;
+
+  &:after {
     content: '';
-    background: #0736F8;
+    background: $brandColor;
     display: block;
     width: 80%;
     height: 3px;
-    margin: 40px auto 0; }
+    margin: 40px auto 0;
+  }
 
-
-/*# sourceMappingURL=app.css.map */
+}
