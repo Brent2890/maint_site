@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMaintenanceLogsTable extends Migration {
+class CreateMaintenanceSchedulesTable extends Migration {
 
     /**
      * Run the migrations.
@@ -12,38 +12,29 @@ class CreateMaintenanceLogsTable extends Migration {
      */
     public function up()
     {
-        Schema::create('maintenance_logs', function(Blueprint $table)
+        Schema::create('maintenance_schedules', function(Blueprint $table)
         {
             $table->increments('id');
+            $table->integer('interval_distance');
+            $table->integer('interval_months');
             $table->smallInteger('user_id')->unsigned();
             $table->foreign(
                 'user_id'
-                )->references(
+            )->references(
                 'id'
-                )->on(
+            )->on(
                 'users'
-                );
+            );
             $table->smallInteger('maint_type_id')->unsigned();
             $table->foreign(
                 'maint_type_id'
-                )->references(
+            )->references(
                 'id'
-                )->on(
+            )->on(
                 'maintenance_types'
-                );
-            $table->smallInteger('vehicle_id')->unsigned();
-            $table->foreign(
-                'vehicle_id'
-                )->references(
-                'id'
-                )->on(
-                'vehicles'
-                );
-            $table->decimal('cost', 8, 2)->nullable();
-            $table->integer('mileage')->unsigned();
-            $table->string('comment')->nullable();
+            );
             $table->timestamps();
-        });
+        });;
     }
 
     /**
@@ -53,7 +44,7 @@ class CreateMaintenanceLogsTable extends Migration {
      */
     public function down()
     {
-        Schema::drop('maintenance_logs');
+        Schema::drop('maintenance_schedules');
     }
 
 }

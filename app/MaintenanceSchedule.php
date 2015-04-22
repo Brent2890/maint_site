@@ -4,6 +4,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class MaintenanceSchedule extends Model {
 
-    protected $table = 'maintenance_schedules';
+    protected $table = 'maintenance_schedule';
 
 }

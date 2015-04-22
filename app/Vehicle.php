@@ -12,7 +12,7 @@ class Vehicle extends Model {
 
     public function maintenance_logs()
     {
-        return $this->hasMany('App\MaintenanceLog','id', 'vehicle_id');
+        return $this->hasMany('App\MaintenanceLog','vehicle_id', 'id');
     }
 
 }

@@ -33,10 +33,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function maintenance_logs()
     {
-        return $this->hasMany('App\MaintenanceLog','id', 'user_id');
+
+        return $this->hasMany('App\MaintenanceLog','user_id', 'id');
     }
-
-
-
 
 }

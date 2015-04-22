@@ -1,13 +1,13 @@
-User: NEEDS CHANGED <br><br>
+User: {{ $name  }}
 
-Date: {{ $date }} <br><br>
+Date: {{ $date }}
 
-Vehicle: {{ $vehicle }} <br><br>
+Vehicle: {{ $vehicle }}
 
-Maintenance Type: {{ $maintenance_type }} <br><br>
+Maintenance Type: {{ $maintenance_type }}
 
-Mileage: {{ $mileage }} miles <br><br>
+Mileage: {{ $mileage }} miles
 
-Cost: ${{ $cost }} <br><br>
+Cost: ${{ $cost }}
 
-Comments: {{ $comments }}
+Comments: {{ $comment }}
