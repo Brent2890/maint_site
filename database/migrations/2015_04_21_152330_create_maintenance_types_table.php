@@ -15,7 +15,7 @@ class CreateMaintenanceTypesTable extends Migration {
 		Schema::create('maintenance_types', function(Blueprint $table)
 		{
 			$table->increments('id');
-            $table->string('name', 80);
+            $table->string('type', 80);
 			$table->timestamps();
 		});
 	}

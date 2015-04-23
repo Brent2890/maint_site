@@ -12,10 +12,10 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="{{ url('/') }}">Logs</a></li>
-                <li><a href="{{ url('/input') }}">Input</a></li>
+                <li><a href="{{ url('/logs') }}">Logs</a></li>
+                <li><a href="{{ url('/input_log') }}">Input Log</a></li>
                 <li><a href="{{ url('/schedule') }}">Schedule</a></li>
-
+                <li><a href="{{ url('/input_schedule') }}">Input Schedule</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">

@@ -12,7 +12,12 @@ class MaintenanceType extends Model {
 
     public function maintenance_logs()
     {
-        return $this->hasMany('App\MaintenanceLog','maintenance_type_key', 'id');
+        return $this->hasMany('App\MaintenanceLog','maint_type_id', 'id');
+    }
+
+    public function maintenance_schedule()
+    {
+        return $this->hasMany('App\MaintenanceSchedule','maint_type_id', 'id');
     }
 
 }

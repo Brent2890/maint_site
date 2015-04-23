@@ -15,4 +15,9 @@ class Vehicle extends Model {
         return $this->hasMany('App\MaintenanceLog','vehicle_id', 'id');
     }
 
+    public function maintenance_schedule()
+    {
+        return $this->hasMany('App\MaintenanceLog','vehicle_id', 'id');
+    }
+
 }

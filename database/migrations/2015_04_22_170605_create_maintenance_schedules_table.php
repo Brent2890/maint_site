@@ -33,6 +33,14 @@ class CreateMaintenanceSchedulesTable extends Migration {
             )->on(
                 'maintenance_types'
             );
+            $table->smallInteger('vehicle_id')->unsigned();
+            $table->foreign(
+                'vehicle_id'
+            )->references(
+                'id'
+            )->on(
+                'vehicles'
+            );
             $table->timestamps();
         });;
     }
