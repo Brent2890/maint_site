@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class PrepareLogRequest extends Request {
+class PrepareScheduleRequest extends Request {
 
     /**
      * Determine if the user is authorized to make this request.
@@ -23,8 +23,9 @@ class PrepareLogRequest extends Request {
     {
         return [
             'vehicle_id' => 'required',
-            'maintenance_type_id' => 'required',
-            'mileage' => 'required'
+            'maint_type_id' => 'required',
+            'interval_distance' => 'required',
+            'interval_months' => 'required'
         ];
     }
 

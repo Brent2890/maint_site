@@ -27,11 +27,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="add_maintenance.blade.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/resources/views/account_details/add_maintenance.blade.php">
+          <file leaf-file-name="PrepareVehicleRequest.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/Http/Requests/PrepareVehicleRequest.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.265625" vertical-offset="0" max-vertical-offset="640">
-                  <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+                <state vertical-scroll-proportion="0.22830579" vertical-offset="0" max-vertical-offset="968">
+                  <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
                   <folding />
                 </state>
               </provider>
@@ -41,11 +41,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="a2dbb4c4c12509937b7a5cf00fd99044" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/storage/framework/views/a2dbb4c4c12509937b7a5cf00fd99044">
+          <file leaf-file-name="add_vehicle.blade.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/resources/views/account_details/add_vehicle.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3323124" vertical-offset="21" max-vertical-offset="731">
-                  <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+                <state vertical-scroll-proportion="0.373822" vertical-offset="0" max-vertical-offset="955">
+                  <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -58,11 +58,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-        <option value="$PROJECT_DIR$/app/Http/Templates/confirm_input.blade.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/resources/views/logs/index.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2015_04_22_170605_create_maintenance_schedules_table.php" />
         <option value="$PROJECT_DIR$/app/Repositories/VehiclesRepositoryInterface.php" />
         <option value="$PROJECT_DIR$/database/seeds/VehicleTableSeeder.php" />
         <option value="$PROJECT_DIR$/composer.json" />
@@ -92,23 +87,28 @@
         <option value="$PROJECT_DIR$/app/Repositories/MaintenanceTypesDBRepository.php" />
         <option value="$PROJECT_DIR$/app/Repositories/VehiclesDBRepository.php" />
         <option value="$PROJECT_DIR$/app/Services/Registrar.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MaintenanceLogController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MaintenanceScheduleController.php" />
         <option value="$PROJECT_DIR$/app/Models/MaintenanceSchedule.php" />
         <option value="$PROJECT_DIR$/app/Models/User.php" />
         <option value="$PROJECT_DIR$/config/auth.php" />
         <option value="$PROJECT_DIR$/app/Models/Vehicle.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/nav.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/account_details/add_vehicle.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/VehicleController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MaintenanceTypeController.php" />
         <option value="$PROJECT_DIR$/app/Models/MaintenanceType.php" />
         <option value="$PROJECT_DIR$/app/Models/MaintenanceLog.php" />
         <option value="$PROJECT_DIR$/resources/views/logs/input_log.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/schedule/schedule.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/logs/logs.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/account_details/add_maintenance.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/account_details/add_maintenance.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/PrepareMaintenanceTypeRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/PrepareScheduleRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MaintenanceTypeController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MaintenanceScheduleController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MaintenanceLogController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/PrepareLogRequest.php" />
+        <option value="$PROJECT_DIR$/resources/views/errors/list.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/account_details/add_vehicle.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/VehicleController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/PrepareVehicleRequest.php" />
       </list>
     </option>
   </component>
@@ -205,73 +205,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="schedule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="account_details" />
+              <option name="myItemId" value="errors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -299,111 +233,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seeds" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Repositories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Providers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maint_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -422,6 +252,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maint_site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maint_site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Requests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -513,13 +365,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32964823" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964823" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -568,45 +420,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../TRS-rwrt/trs-rewrite/app/Repositories/RepositoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6018519" vertical-offset="0" max-vertical-offset="1443">
-          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4248971" vertical-offset="900" max-vertical-offset="2691">
-          <caret line="101" column="34" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/AbstractDBRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32098764" vertical-offset="0" max-vertical-offset="2197">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28645295" vertical-offset="206" max-vertical-offset="1173">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/VehiclesRepositoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19027922" vertical-offset="0" max-vertical-offset="967">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/RepositoryInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1443">
@@ -965,23 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/MaintenanceSchedule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
-          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding>
-            <marker date="1429887935213" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1429887935213" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429887935213" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429887935213" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429887935213" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429887935213" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429887935213" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429887935213" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/VehiclesDBRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07024793" vertical-offset="0" max-vertical-offset="968">
@@ -1005,38 +801,6 @@
             <marker date="1429890659243" expanded="true" signature="-1:-1" placeholder="{...}" />
             <marker date="1429890659243" expanded="true" signature="-1:-1" placeholder="{...}" />
             <marker date="1429890659243" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MaintenanceLogController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50929755" vertical-offset="0" max-vertical-offset="968">
-          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-          <folding>
-            <marker date="1429887715106" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1429887715106" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429887715106" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429887715106" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429887715106" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429887715106" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MaintenanceScheduleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4214876" vertical-offset="0" max-vertical-offset="968">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding>
-            <marker date="1429887730346" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1429887730346" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429887730346" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429887730346" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429887730346" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429887730346" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429887730346" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429887730346" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1132,20 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MaintenanceTypeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45661157" vertical-offset="0" max-vertical-offset="968">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <marker date="1429898545568" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1429898545568" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429898545568" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429898545568" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429898545568" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/errors/503.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="994">
@@ -1165,13 +915,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/logs/input_log.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/logs/logs.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.106806286" vertical-offset="0" max-vertical-offset="955">
-          <caret line="6" column="70" selection-start-line="6" selection-start-column="70" selection-end-line="6" selection-end-column="70" />
+        <state vertical-scroll-proportion="0.49173555" vertical-offset="0" max-vertical-offset="968">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
           <folding>
-            <marker date="1429903158461" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429903158461" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429903234577" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429903234577" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429903234577" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429903234577" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429903234577" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5578125" vertical-offset="0" max-vertical-offset="640">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <marker date="1429904647084" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429904647084" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/a2dbb4c4c12509937b7a5cf00fd99044">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6411825" vertical-offset="0" max-vertical-offset="981">
+          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/account_details/add_maintenance.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39162305" vertical-offset="0" max-vertical-offset="955">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <marker date="1429903276461" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429903276461" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1179,7 +962,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/schedule/schedule.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45661157" vertical-offset="0" max-vertical-offset="968">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <marker date="1429903184073" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1429903184073" expanded="true" signature="-1:-1" placeholder="..." />
@@ -1201,68 +984,161 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/logs/logs.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/PrepareMaintenanceTypeRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49173555" vertical-offset="0" max-vertical-offset="968">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.50929755" vertical-offset="0" max-vertical-offset="968">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <marker date="1429903234577" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429903234577" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429903234577" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429903234577" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429903234577" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429906507416" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429906507416" expanded="true" signature="-1:-1" placeholder=" Determine if the user is authorized to make this request. ..." />
+            <marker date="1429906507416" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429906507416" expanded="true" signature="-1:-1" placeholder=" Get the validation rules that apply to the request. ..." />
+            <marker date="1429906507416" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429906507416" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/account_details/add_vehicle.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/MaintenanceSchedule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39162305" vertical-offset="0" max-vertical-offset="955">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4731405" vertical-offset="52" max-vertical-offset="1020">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
-            <marker date="1429889884770" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429889884770" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429887935213" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1429887935213" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429887935213" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429887935213" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429887935213" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429887935213" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429887935213" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429887935213" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/account_details/add_maintenance.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/PrepareScheduleRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.265625" vertical-offset="0" max-vertical-offset="640">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-          <folding />
+        <state vertical-scroll-proportion="0.56198347" vertical-offset="0" max-vertical-offset="968">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <marker date="1429906672601" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429906672601" expanded="true" signature="-1:-1" placeholder=" Determine if the user is authorized to make this request. ..." />
+            <marker date="1429906672601" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429906672601" expanded="true" signature="-1:-1" placeholder=" Get the validation rules that apply to the request. ..." />
+            <marker date="1429906672601" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429906672601" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MaintenanceScheduleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14049587" vertical-offset="0" max-vertical-offset="969">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <marker date="1429906979996" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429906979996" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429906979996" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429906979996" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429906979996" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429906979996" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429906979996" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429906979996" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MaintenanceTypeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.035123967" vertical-offset="0" max-vertical-offset="968">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding>
+            <marker date="1429906950035" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429906950035" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429906950035" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429906950035" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429906950035" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MaintenanceLogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.80785125" vertical-offset="0" max-vertical-offset="968">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <marker date="1429907016023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429907016023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429907016023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429907016023" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429907016023" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429907016023" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/errors/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1053719" vertical-offset="0" max-vertical-offset="968">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding>
+            <marker date="1429907828777" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/logs/input_log.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6052356" vertical-offset="0" max-vertical-offset="955">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <marker date="1429903158461" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429903158461" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/PrepareLogRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5444215" vertical-offset="0" max-vertical-offset="968">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <marker date="1429907318067" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429907318067" expanded="true" signature="-1:-1" placeholder=" Determine if the user is authorized to make this request. ..." />
+            <marker date="1429907318067" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429907318067" expanded="true" signature="-1:-1" placeholder=" Get the validation rules that apply to the request. ..." />
+            <marker date="1429907318067" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429907318067" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/VehicleController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47417355" vertical-offset="0" max-vertical-offset="968">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5268595" vertical-offset="0" max-vertical-offset="968">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <marker date="1429891273732" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1429891273732" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429891273732" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429891273732" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429891273732" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429908404539" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429908404539" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429908404539" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429908404539" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429908404539" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/PrepareVehicleRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5578125" vertical-offset="0" max-vertical-offset="640">
+        <state vertical-scroll-proportion="0.22830579" vertical-offset="0" max-vertical-offset="968">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/account_details/add_vehicle.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.373822" vertical-offset="0" max-vertical-offset="955">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <marker date="1429904647084" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429904647084" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/framework/views/a2dbb4c4c12509937b7a5cf00fd99044">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3323124" vertical-offset="21" max-vertical-offset="731">
-          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
           <folding />
         </state>
       </provider>

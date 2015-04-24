@@ -1,15 +1,12 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Http\Requests\PrepareScheduleRequest;
 use App\Models\MaintenanceLog;
 use App\Models\MaintenanceSchedule;
 use App\Models\MaintenanceType;
-use App\Models\User;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class MaintenanceScheduleController extends Controller {
 
@@ -43,7 +40,7 @@ class MaintenanceScheduleController extends Controller {
         return view('schedule.input_schedule')->with($data);
     }
 
-    public function store(Request $request)
+    public function store(PrepareScheduleRequest $request)
     {
         $data = $this->maintenance_schedule->buildScheduleData($request);
         MaintenanceSchedule::input($data)->save();

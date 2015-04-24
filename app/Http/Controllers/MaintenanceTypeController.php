@@ -1,8 +1,7 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Http\Requests\PrepareMaintenanceTypeRequest;
 use App\Models\MaintenanceType;
 use Illuminate\Http\Request;
 
@@ -20,7 +19,7 @@ class MaintenanceTypeController extends Controller {
         return view('account_details.add_maintenance');
     }
 
-    public function store(Request $request)
+    public function store(PrepareMaintenanceTypeRequest $request)
     {
         $data = $this->maintenance_type->buildMaintenanceTypeData($request);
         MaintenanceType::input($data)->save();

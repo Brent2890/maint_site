@@ -1,16 +1,11 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use App\Http\Requests\PrepareLogRequest;
 use App\Models\MaintenanceLog;
 use App\Models\MaintenanceType;
-use App\Models\User;
 use App\Models\Vehicle;
-use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class MaintenanceLogController extends Controller {
 
@@ -40,7 +35,7 @@ class MaintenanceLogController extends Controller {
         return view('logs.input_log')->with($data);
     }
 
-    public function store(Request $request)
+    public function store(PrepareLogRequest $request)
     {
         $data = $this->maintenance_log->buildLogData($request);
         MaintenanceLog::input($data)->save();

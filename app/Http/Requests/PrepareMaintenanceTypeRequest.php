@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class PrepareLogRequest extends Request {
+class PrepareMaintenanceTypeRequest extends Request {
 
     /**
      * Determine if the user is authorized to make this request.
@@ -22,9 +22,7 @@ class PrepareLogRequest extends Request {
     public function rules()
     {
         return [
-            'vehicle_id' => 'required',
-            'maintenance_type_id' => 'required',
-            'mileage' => 'required'
+            'maintenance_type' => 'required'
         ];
     }
 
