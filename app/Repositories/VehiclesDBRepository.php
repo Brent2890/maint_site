@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Vehicle;
+use App\Models\Vehicle;
 
 class VehiclesDBRepository extends \App\Repositories\AbstractDBRepository implements VehiclesRepositoryInterface
 {

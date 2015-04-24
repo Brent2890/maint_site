@@ -16,6 +16,8 @@
                 <li><a href="{{ url('/input_log') }}">Input Log</a></li>
                 <li><a href="{{ url('/schedule') }}">Schedule</a></li>
                 <li><a href="{{ url('/input_schedule') }}">Input Schedule</a></li>
+                <li><a href="{{ url('/account_details/add_vehicle') }}">Add Vehicle</a></li>
+                <li><a href="{{ url('/account_details/add_maintenance') }}">Add Maintenance Type</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">

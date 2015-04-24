@@ -4,10 +4,10 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\PrepareLogRequest;
-use App\MaintenanceLog;
-use App\MaintenanceType;
-use App\User;
-use App\Vehicle;
+use App\Models\MaintenanceLog;
+use App\Models\MaintenanceType;
+use App\Models\User;
+use App\Models\Vehicle;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -27,12 +27,7 @@ class MaintenanceLogController extends Controller {
 
     public function index()
     {
-        if(Auth::check())
-        {
-            $data['logs'] = $this->maintenance_log->whereUserId();
-        } else {
-            $data['logs'] = $this->maintenance_log->all();
-        }
+        $data['logs'] = $this->maintenance_log->whereUserId();
 
         return view('logs.logs')->with($data);
     }
@@ -47,7 +42,7 @@ class MaintenanceLogController extends Controller {
 
     public function store(Request $request)
     {
-        $data = $this->maintenance_log->buildLogTemplateData($request);
+        $data = $this->maintenance_log->buildLogData($request);
         MaintenanceLog::input($data)->save();
 
         return redirect('/logs');

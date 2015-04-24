@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\MaintenanceType;
+use App\Models\MaintenanceType;
 
 class MaintenanceTypesDBRepository extends \App\Repositories\AbstractDBRepository implements MaintenanceTypesRepositoryInterface
 {

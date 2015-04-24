@@ -5,7 +5,6 @@
     <h1 class="heading-style">Input Maintenance</h1>
 
     {!! Form::open(['action' => 'MaintenanceLogController@store']) !!}
-
     <div class="form-group">
 
         {!! Form::label('vehicle', 'Vehicle:') !!}

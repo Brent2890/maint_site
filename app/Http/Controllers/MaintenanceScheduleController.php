@@ -3,11 +3,11 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\MaintenanceLog;
-use App\MaintenanceSchedule;
-use App\MaintenanceType;
-use App\User;
-use App\Vehicle;
+use App\Models\MaintenanceLog;
+use App\Models\MaintenanceSchedule;
+use App\Models\MaintenanceType;
+use App\Models\User;
+use App\Models\Vehicle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
