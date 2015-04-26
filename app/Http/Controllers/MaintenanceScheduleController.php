@@ -7,6 +7,7 @@ use App\Models\MaintenanceSchedule;
 use App\Models\MaintenanceType;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MaintenanceScheduleController extends Controller {
 
